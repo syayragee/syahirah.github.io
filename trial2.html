@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tekton Leadership</title>
+
+  <style>
+    :root {
+  --color-primary: #f59e0b;
+  --color-secondary: #1e40af;
+  --color-dark-bg: #1e1e1e;
+  --color-footer-bg: #1f2937;
+  --color-text-light: #dbeafe;
+  --color-text-dark: #374151;
+  --color-text-gray: #6b7280;
+  --color-text-heading: #1f2937;
+  --color-white: #ffffff;
+  --color-light-gray-bg: #f9fafb;
+  --color-border: #e5e7eb;
+  --font-body: 'Montserrat', sans-serif;
+  --font-heading: 'Roboto Slab', serif;
+  --font-special: 'Inter', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--color-text-heading);
+}
+
+p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.highlight {
+  font-family: var(--font-special);
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-green {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.text-blue {
+  color: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
+
+/* CSS from section:header */
+.header-section {
+  padding: 0;
+  background-color: var(--color-white);
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.site-header .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--color-text-heading);
+}
+.logo img {
+  width: 34px;
+  height: 30px;
+}
+.main-nav ul {
+  display: flex;
+  gap: 32px;
+}
+.main-nav a {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-text-gray);
+  transition: color 0.3s ease;
+}
+.main-nav a:hover,
+.main-nav a.active {
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .main-nav {
+    display: none; /* Simple responsive solution: hide nav on mobile */
+  }
+}
+
+/* CSS from section:hero */
+.hero-section {
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-light);
+  text-align: center;
+  padding-top: 115px;
+  padding-bottom: 115px;
+}
+.hero-content {
+  max-width: 896px;
+  margin: 0 auto;
+}
+.hero-content h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--color-white);
+  margin-bottom: 19px;
+}
+.hero-content p {
+  font-size: 20px;
+  line-height: 1.65;
+}
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+
+/* CSS from section:philosophy */
+#section-philosophy {
+  background-color: var(--color-white);
+}
+.philosophy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.philosophy-text h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+.philosophy-text .intro-text {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--color-text-dark);
+  margin-bottom: 24px;
+}
+.values-block h3 {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+.values-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+.external-resources {
+  background-color: var(--color-light-gray-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px;
+}
+.external-resources h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.external-resources ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-text-gray);
+}
+.philosophy-image img {
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 992px) {
+  .philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CSS from section:executives */
+#section-executives {
+  background-color: var(--color-white);
+}
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 48px;
+}
+.executives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+.leader-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.leader-card img {
+  width: 100%;
+  height: 256px;
+  object-fit: cover;
+}
+.card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card-content h3 {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.card-content .title {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.card-content .bio {
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-text-dark);
+  margin-bottom: 16px;
+  flex-grow: 1;
+}
+.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.credentials li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--color-text-gray);
+}
+.credentials li img {
+  width: 15px;
+  height: 12px;
+}
+
+/* CSS from section:department */
+#section-department {
+  background-color: var(--color-white);
+}
+.department-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.dept-leader {
+  text-align: center;
+  max-width: 220px;
+}
+.dept-leader img {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  object-fit: cover;
+}
+.dept-leader h3 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.dept-leader .title {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-primary);
+  margin-bottom: 8px;
+}
+.dept-leader .desc {
+  font-size: 12px;
+  line-height: 1.33;
+  color: var(--color-text-dark);
+}
+
+/* CSS from section:resources */
+#section-resources {
+  background-color: var(--color-light-gray-bg);
+}
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 32px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.resource-card {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1), 0px 1px 2px rgba(0,0,0,0.06);
+}
+.resource-card h3 {
+  font-family: var(--font-body);
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 16px;
+}
+.cert-list, .download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cert-list li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.download-list a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: opacity 0.3s;
+}
+.download-list a:hover {
+  opacity: 0.8;
+}
+.download-list img {
+  width: 16px;
+  height: 16px;
+}
+@media (max-width: 900px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* CSS from section:cta */
+.cta-section {
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-light);
+  text-align: center;
+}
+.cta-content {
+  max-width: 896px;
+  margin: 0 auto;
+}
+.cta-content h2 {
+  font-size: 30px;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+.cta-content p {
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+.btn-primary:hover {
+  background-color: #d97706; /* Darker yellow */
+}
+.btn-secondary {
+  background-color: var(--color-white);
+  color: var(--color-secondary);
+}
+.btn-secondary:hover {
+  background-color: #f0f0f0; /* Lighter gray */
+}
+
+/* CSS from section:footer */
+.site-footer {
+  padding: 0; /* Remove section padding */
+  background-color: var(--color-footer-bg);
+  color: #9ca3af;
+}
+.site-footer .container {
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.footer-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 48px 32px;
+  padding-bottom: 48px;
+}
+.footer-about .logo {
+  font-size: 20px;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+.footer-about .logo img {
+  width: 27px;
+  height: 24px;
+}
+.footer-about p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #9ca3af;
+}
+.footer-links h4, .footer-contact h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+.footer-links ul, .footer-contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer-links a {
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.footer-links a:hover {
+  color: var(--color-primary);
+}
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.footer-contact li img {
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+.footer-bottom {
+  border-top: 1px solid var(--color-text-dark);
+  padding-top: 32px;
+  text-align: center;
+  font-size: 16px;
+}
+.footer-bottom .credit {
+  font-size: 14px;
+  margin-top: 8px;
+}
+.footer-bottom .credit .text-bold {
+  color: var(--color-primary);
+}
+.footer-bottom .last-modified {
+  font-size: 12px;
+  margin-top: 8px;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Section: Header -->
+  <section id="section-header" class="header-section">
+    <header class="site-header">
+      <div class="container">
+        <div class="header-content">
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="logo">
+            <span>TEKTON</span>
+          </a>
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#" class="active">Management</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Section: Hero -->
+  <section id="section-hero" class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Meet Our <em class="highlight">Leadership Team</em></h1>
+        <p>Discover the visionary minds behind Tekton's success. Our experienced leadership team brings decades of construction expertise, innovative thinking, and <span class="text-underline">unwavering commitment</span> to excellence in every project we undertake.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Philosophy -->
+  <section id="section-philosophy">
+    <div class="container">
+      <div class="philosophy-grid">
+        <div class="philosophy-text">
+          <h2>Our Leadership Philosophy</h2>
+          <p class="intro-text">At Tekton, we believe that <span class="text-bold text-blue">exceptional leadership</span> is the foundation of every successful construction project. Our management team combines technical expertise with strategic vision to deliver results that exceed expectations.</p>
+          
+          <div class="values-block">
+            <h3>Core Leadership Values:</h3>
+            <ul class="values-list">
+              <li><span class="text-bold">Integrity</span> in all business dealings</li>
+              <li><span class="text-bold">Innovation</span> in construction methodologies</li>
+              <li><span class="text-bold">Safety-first</span> approach to every project</li>
+              <li>Commitment to <span class="text-green">sustainable building practices</span></li>
+              <li>Continuous professional development</li>
+            </ul>
+          </div>
+
+          <div class="external-resources">
+            <h4>External Resources:</h4>
+            <ul>
+              <li>Member of <a href="#" class="text-blue">Associated General Contractors of America</a></li>
+              <li>Certified by National Safety Council</li>
+              <li>LEED Accredited Professionals on staff</li>
+            </ul>
+          </div>
+        </div>
+        <div class="philosophy-image">
+          <img src="images/philosophy.png" alt="philosophy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Executive Leadership -->
+  <section id="section-executives">
+    <div class="container">
+      <h2 class="section-title">Executive Leadership</h2>
+      <div class="executives-grid">
+        <!-- Michael -->
+        <article class="leader-card">
+          <img src="images/michael.png" alt="michael">
+          <div class="card-content">
+            <h3>Michael Thompson</h3>
+            <p class="title">Chief Executive Officer</p>
+            <p class="bio"><span class="text-bold">25+ years</span> of construction industry experience. Visionary leader specializing in large-scale commercial projects and <span class="text-underline">sustainable construction practices</span>.</p>
+            <ul class="credentials">
+              <li> MS Civil Engineering, MIT</li>
+              <li> PMP Certified</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Sarah -->
+        <article class="leader-card">
+          <img src="images/sarah.png" alt="sarah">
+          <div class="card-content">
+            <h3>Sarah Rodriguez</h3>
+            <p class="title">Chief Operating Officer</p>
+            <p class="bio">Operations expert with <span class="text-bold">20 years</span> in project management. Specializes in process optimization and <span class="text-underline">quality assurance</span> across all construction phases.</p>
+            <ul class="credentials">
+              <li> MBA Operations, Stanford</li>
+              <li> Six Sigma Black Belt</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- David -->
+        <article class="leader-card">
+          <img src="images/david.png" alt="david">
+          <div class="card-content">
+            <h3>David Chen</h3>
+            <p class="title">Chief Financial Officer</p>
+            <p class="bio">Financial strategist with <span class="text-bold">18 years</span> in construction finance. Expert in project cost management and <span class="text-underline">risk assessment</span> for complex construction ventures.</p>
+            <ul class="credentials">
+              <li> CPA, MBA Finance</li>
+              <li> Certified Construction Financial Professional</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Department Leadership -->
+  <section id="section-department">
+    <div class="container">
+      <h2 class="section-title">Department Leadership</h2>
+      <div class="department-grid">
+        <!-- Repeat for each leader -->
+        <div class="dept-leader">
+          <img src="images/james.png" alt="james">
+          <h3>James Wilson</h3>
+          <p class="title">Engineering Director</p>
+          <p class="desc"><span class="text-bold">15 years</span> structural engineering</p>
+        </div>
+        <div class="dept-leader">
+          <img src="images/lisa.png" alt="lisa">
+          <h3>Lisa Martinez</h3>
+          <p class="title">Safety Director</p>
+          <p class="desc">OSHA certified, <span class="text-underline">zero-incident specialist</span></p>
+        </div>
+        <div class="dept-leader">
+          <img src="images/robert.png" alt="robert">
+          <h3>Robert Kim</h3>
+          <p class="title">Project Director</p>
+          <p class="desc"><span class="text-bold">$500M+</span> projects managed</p>
+        </div>
+        <div class="dept-leader">
+          <img src="images/ananda.png" alt="amanda">
+          <h3>Amanda Foster</h3>
+          <p class="title">HR Director</p>
+          <p class="desc">Talent development expert</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Company Resources -->
+  <section id="section-resources">
+    <div class="container">
+      <h2 class="section-title">Company Resources</h2>
+      <div class="resources-grid">
+        <div class="resource-card">
+          <h3>Company Certifications</h3>
+          <ul class="cert-list">
+            <li><span class="text-bold">ISO 9001:2015</span> Quality Management</li>
+            <li><span class="text-bold">OSHA 30-Hour</span> Safety Certification</li>
+            <li><span class="text-bold">LEED Gold</span> Building Certification</li>
+            <li><span class="text-green">Green Building Council</span> Member</li>
+            <li>Better Business Bureau A+ Rating</li>
+          </ul>
+        </div>
+        <div class="resource-card">
+          <h3>Downloadable Resources</h3>
+          <ul class="download-list">
+            <li><a href="#"> Company Profile (PDF)</a></li>
+            <li><a href="#"> Safety Manual (PDF)</a></li>
+            <li><a href="#"> Capabilities Brochure (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Call to Action -->
+  <section id="section-cta" class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Connect With Our Leadership</h2>
+        <p>Have questions about our management approach or want to discuss your next construction project? <span class="text-bold">Reach out to our team</span> for expert guidance.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary"> Contact Management Team </a>
+          <a href="#" class="btn btn-secondary"> Industry Resources </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="section-footer" class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-about">
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="logo">
+            <span>TEKTON</span>
+          </a>
+          <p>Building excellence through innovative construction solutions and <span class="text-bold">expert leadership</span>.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Info</h4>
+          <ul>
+            <li> (555) 123-4567</li>
+            <li> <a href="mailto:info@tekton-construction.com">info@tekton-construction.com</a></li>
+            <li> 123 Construction Ave, Builder City, BC 12345</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Tekton Construction. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
