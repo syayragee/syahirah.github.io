@@ -1,22 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tekton Leadership</title>
+  <title>Tekton Management</title>
 
   <style>
     :root {
   --color-primary: #f59e0b;
   --color-secondary: #1e40af;
-  --color-dark-bg: #1e1e1e;
-  --color-footer-bg: #1f2937;
+  --color-dark-bg: #000000;
   --color-text-light: #dbeafe;
-  --color-text-dark: #374151;
-  --color-text-gray: #6b7280;
-  --color-text-heading: #1f2937;
   --color-white: #ffffff;
-  --color-light-gray-bg: #f9fafb;
   --color-border: #e5e7eb;
   --font-body: 'Montserrat', sans-serif;
   --font-heading: 'Roboto Slab', serif;
@@ -32,8 +28,8 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  background-color: var(--color-white);
-  color: var(--color-text-dark);
+  background-color: #000000;
+  color: var(--color-text-light);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -54,7 +50,7 @@ section {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: var(--font-heading);
-  color: var(--color-text-heading);
+  color: var(--color-primary);
 }
 
 p, ul, li {
@@ -107,24 +103,6 @@ img {
   }
 }
 
-/* CSS from section:header */
-.header-section {
-  padding: 0;
-  background-color: var(--color-white);
-  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-.site-header .container {
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .logo {
   display: flex;
   align-items: center;
@@ -155,11 +133,10 @@ img {
 }
 @media (max-width: 768px) {
   .main-nav {
-    display: none; /* Simple responsive solution: hide nav on mobile */
+    display: none; 
   }
 }
 
-/* CSS from section:hero */
 .hero-section {
   background-color: var(--color-dark-bg);
   color: var(--color-text-light);
@@ -196,9 +173,8 @@ img {
   }
 }
 
-/* CSS from section:philosophy */
 #section-philosophy {
-  background-color: var(--color-white);
+  background-color: var(--color-dark-bg);
 }
 .philosophy-grid {
   display: grid;
@@ -214,7 +190,7 @@ img {
 .philosophy-text .intro-text {
   font-size: 18px;
   line-height: 1.55;
-  color: var(--color-text-dark);
+  color: var(--color-white);
   margin-bottom: 24px;
 }
 .values-block h3 {
@@ -232,25 +208,6 @@ img {
   line-height: 1.5;
   margin-bottom: 40px;
 }
-.external-resources {
-  background-color: var(--color-light-gray-bg);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 24px;
-}
-.external-resources h4 {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-.external-resources ul {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--color-text-gray);
-}
 .philosophy-image img {
   border-radius: 8px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -261,9 +218,8 @@ img {
   }
 }
 
-/* CSS from section:executives */
 #section-executives {
-  background-color: var(--color-white);
+  background-color: var(--color-dark-bg);
 }
 .section-title {
   text-align: center;
@@ -312,7 +268,7 @@ img {
 .card-content .bio {
   font-size: 14px;
   line-height: 1.4;
-  color: var(--color-text-dark);
+  color: var(--color-dark-bg);
   margin-bottom: 16px;
   flex-grow: 1;
 }
@@ -326,16 +282,15 @@ img {
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: var(--color-text-gray);
+  color: var(--color-secondary);
 }
 .credentials li img {
   width: 15px;
   height: 12px;
 }
 
-/* CSS from section:department */
 #section-department {
-  background-color: var(--color-white);
+  background-color: var(--color-dark-bg);
 }
 .department-grid {
   display: flex;
@@ -373,9 +328,8 @@ img {
   color: var(--color-text-dark);
 }
 
-/* CSS from section:resources */
 #section-resources {
-  background-color: var(--color-light-gray-bg);
+  background-color: var(--color-dark-bg);
 }
 .resources-grid {
   display: grid;
@@ -402,6 +356,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  color: var(--color-primary);
 }
 .cert-list li {
   font-size: 16px;
@@ -429,7 +384,6 @@ img {
   }
 }
 
-/* CSS from section:cta */
 .cta-section {
   background-color: var(--color-dark-bg);
   color: var(--color-text-light);
@@ -473,128 +427,19 @@ img {
   color: var(--color-white);
 }
 .btn-primary:hover {
-  background-color: #d97706; /* Darker yellow */
-}
-.btn-secondary {
-  background-color: var(--color-white);
-  color: var(--color-secondary);
-}
-.btn-secondary:hover {
-  background-color: #f0f0f0; /* Lighter gray */
+  background-color: #d97706; 
 }
 
-/* CSS from section:footer */
-.site-footer {
-  padding: 0; /* Remove section padding */
-  background-color: var(--color-footer-bg);
-  color: #9ca3af;
-}
-.site-footer .container {
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-.footer-main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 48px 32px;
-  padding-bottom: 48px;
-}
-.footer-about .logo {
-  font-size: 20px;
-  color: var(--color-white);
-  margin-bottom: 16px;
-}
-.footer-about .logo img {
-  width: 27px;
-  height: 24px;
-}
-.footer-about p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: #9ca3af;
-}
-.footer-links h4, .footer-contact h4 {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--color-white);
-  margin-bottom: 16px;
-}
-.footer-links ul, .footer-contact ul {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.footer-links a {
-  font-size: 16px;
-  transition: color 0.3s ease;
-}
-.footer-links a:hover {
-  color: var(--color-primary);
-}
-.footer-contact li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  font-size: 16px;
-  line-height: 1.5;
-}
-.footer-contact li img {
-  margin-top: 4px;
-  width: 16px;
-  height: 16px;
-  flex-shrink: 0;
-}
-.footer-bottom {
-  border-top: 1px solid var(--color-text-dark);
-  padding-top: 32px;
-  text-align: center;
-  font-size: 16px;
-}
-.footer-bottom .credit {
-  font-size: 14px;
-  margin-top: 8px;
-}
-.footer-bottom .credit .text-bold {
-  color: var(--color-primary);
-}
-.footer-bottom .last-modified {
-  font-size: 12px;
-  margin-top: 8px;
-}
   </style>
 </head>
 <body>
-
-  <!-- Section: Header -->
-  <section id="section-header" class="header-section">
-    <header class="site-header">
-      <div class="container">
-        <div class="header-content">
-          <a href="#" class="logo">
-            <img src="images/logo.png" alt="logo">
-            <span>TEKTON</span>
-          </a>
-          <nav class="main-nav">
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#" class="active">Management</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Projects</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-    </header>
-  </section>
 
   <!-- Section: Hero -->
   <section id="section-hero" class="hero-section">
     <div class="container">
       <div class="hero-content">
-        <h1>Meet Our <em class="highlight">Leadership Team</em></h1>
-        <p>Discover the visionary minds behind Tekton's success. Our experienced leadership team brings decades of construction expertise, innovative thinking, and <span class="text-underline">unwavering commitment</span> to excellence in every project we undertake.</p>
+        <h1>Tekton <em class="highlight">Management Team</em></h1>
+        <p>Discover the visionary minds behind Tekton's success. Our experienced leadership team brings decades of construction expertise, innovative thinking to excellence in every project we undertake.</p>
       </div>
     </div>
   </section>
@@ -615,15 +460,6 @@ img {
               <li><span class="text-bold">Safety-first</span> approach to every project</li>
               <li>Commitment to <span class="text-green">sustainable building practices</span></li>
               <li>Continuous professional development</li>
-            </ul>
-          </div>
-
-          <div class="external-resources">
-            <h4>External Resources:</h4>
-            <ul>
-              <li>Member of <a href="#" class="text-blue">Associated General Contractors of America</a></li>
-              <li>Certified by National Safety Council</li>
-              <li>LEED Accredited Professionals on staff</li>
             </ul>
           </div>
         </div>
@@ -689,7 +525,6 @@ img {
     <div class="container">
       <h2 class="section-title">Department Leadership</h2>
       <div class="department-grid">
-        <!-- Repeat for each leader -->
         <div class="dept-leader">
           <img src="images/james.png" alt="james">
           <h3>James Wilson</h3>
@@ -729,70 +564,45 @@ img {
             <li><span class="text-bold">ISO 9001:2015</span> Quality Management</li>
             <li><span class="text-bold">OSHA 30-Hour</span> Safety Certification</li>
             <li><span class="text-bold">LEED Gold</span> Building Certification</li>
-            <li><span class="text-green">Green Building Council</span> Member</li>
+            <li><span class="text-bold">Green Building Council</span> Member</li>
             <li>Better Business Bureau A+ Rating</li>
           </ul>
         </div>
         <div class="resource-card">
           <h3>Downloadable Resources</h3>
           <ul class="download-list">
-            <li><a href="#"> Company Profile (PDF)</a></li>
-            <li><a href="#"> Safety Manual (PDF)</a></li>
-            <li><a href="#"> Capabilities Brochure (PDF)</a></li>
+            <li><a href="https://mkusumah.github.io/TektonProject/tekton.html"> Company Profile (PDF)</a></li>
+            <li><a href="https://www.osha.gov/sites/default/files/2020-11/Workplace%20Health%20and%20Safety%20Student%20Manual.pdf"> Safety Manual (PDF)</a></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section: Call to Action -->
+  <!-- Section: Contact -->
   <section id="section-cta" class="cta-section">
     <div class="container">
       <div class="cta-content">
         <h2>Connect With Our Leadership</h2>
         <p>Have questions about our management approach or want to discuss your next construction project? <span class="text-bold">Reach out to our team</span> for expert guidance.</p>
         <div class="cta-buttons">
-          <a href="#" class="btn btn-primary"> Contact Management Team </a>
-          <a href="#" class="btn btn-secondary"> Industry Resources </a>
-        </div>
+        <a href="mailto:management@treton.com" class="btn btn-primary">Contact Management Team</a>
+        <br><br>
+      </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer id="section-footer" class="site-footer">
-    <div class="container">
-      <div class="footer-main">
-        <div class="footer-about">
-          <a href="#" class="logo">
-            <img src="images/logo.png" alt="logo">
-            <span>TEKTON</span>
-          </a>
-          <p>Building excellence through innovative construction solutions and <span class="text-bold">expert leadership</span>.</p>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Careers</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact">
-          <h4>Contact Info</h4>
-          <ul>
-            <li> (555) 123-4567</li>
-            <li> <a href="mailto:info@tekton-construction.com">info@tekton-construction.com</a></li>
-            <li> 123 Construction Ave, Builder City, BC 12345</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2024 Tekton Construction. All rights reserved.</p>
-      </div>
-    </div>
+   <footer style="margin-top: 50px; text-align: center;">
+    <p id="lastModified"></p>
   </footer>
+
+  <script>
+    const modifiedDate = new Date(document.lastModified);
+    document.getElementById("lastModified").textContent =
+      "Date Last Modified: " + modifiedDate.toLocaleString();
+  </script>
 
 </body>
 </html>
